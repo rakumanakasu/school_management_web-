@@ -1,0 +1,13 @@
+import 'dart:convert';
+import 'package:http/http.dart' as http;
+import 'api_service.dart';
+
+/// ------------------ Dashboard Stats ------------------
+  Future<Map<String, dynamic>> getDashboardStats() async {
+    final response = await http.get(
+      Uri.parse('$baseUrl/api/v1/dashboard/stats'),
+      headers: await _getHeaders(authRequired: true),
+    );
+    if (response.statusCode == 200) return jsonDecode(response.body);
+    throw Exception('Failed to fetch dashboard stats');
+  }

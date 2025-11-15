@@ -1,0 +1,70 @@
+# Flutter/Dart/Pub related
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+build/
+coverage/
+**/doc/api/
+# Flutter generated files
+pubspec.lock
+generated_plugin_registrant.*
+
+# Web build folder
+build/web/
+
+# iOS
+ios/Flutter/Flutter.podspec
+ios/Flutter/Generated.xcconfig
+ios/Pods/
+ios/Runner.xcworkspace/
+ios/Runner/GeneratedPluginRegistrant.*
+
+# Android
+android/.gradle/
+android/build/
+android/local.properties
+
+# IDEs
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# Misc
+*.log
+*.class
+*.pyc
+*.swp
+.history
+.swiftpm/
+migrate_working_dir/
+.build/
+.buildlog/
+.svn/
+*.apk
+*.aab
+*.jar
+
+# Web
+web/.dart_tool/
+web/build/
+
+# Android Studio build artifacts
+/android/app/debug
+/android/app/profile
+/android/app/release
+
+# Obfuscation / symbolication
+app.*.map.json
+app.*.symbols

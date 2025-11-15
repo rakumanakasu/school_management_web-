@@ -1,0 +1,59 @@
+import 'package:flutter/material.dart';
+
+class TeacherDetailScreen extends StatelessWidget {
+  final Map<String, dynamic> teacher;
+
+  const TeacherDetailScreen({Key? key, required this.teacher}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    final classrooms = teacher['classrooms'] as List<dynamic>? ?? [];
+
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('${teacher['firstName']} ${teacher['lastName']}'),
+      ),
+      body: SingleChildScrollView(
+        padding: const EdgeInsets.all(16),
+        child: Column(
+          children: [
+            CircleAvatar(
+              radius: 60,
+              backgroundImage: (teacher['photo'] != null && teacher['photo'] != '')
+                  ? NetworkImage(teacher['photo'])
+                  : null,
+              child: (teacher['photo'] == null || teacher['photo'] == '')
+                  ? const Icon(Icons.person, size: 60)
+                  : null,
+            ),
+            const SizedBox(height: 20),
+            ListTile(
+              leading: const Icon(Icons.email),
+              title: Text(teacher['email'] ?? ''),
+            ),
+            ListTile(
+              leading: const Icon(Icons.home),
+              title: Text(teacher['address'] ?? ''),
+            ),
+            ListTile(
+              leading: const Icon(Icons.monetization_on),
+              title: Text('Salary: \$${teacher['salary'] ?? 0}'),
+            ),
+            ListTile(
+              leading: const Icon(Icons.cake),
+              title: Text('DOB: ${teacher['dob'] ?? ''}'),
+            ),
+            ListTile(
+              leading: const Icon(Icons.person_outline),
+              title: Text('Gender: ${teacher['gender'] ?? ''}'),
+            ),
+            ListTile(
+              leading: const Icon(Icons.class_),
+              title: Text('Classrooms: ${classrooms.join(", ")}'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
