@@ -1,6 +1,18 @@
 # School Management Flutter App
 
-A Flutter application for managing school operations, including attendance, classes, students, and teachers.
+This showcases the **School Management System** I developed as part of my exam project.  
+The system is built using:
+
+- **Java Spring Boot** for the backend
+- **Keycloak** for secure authentication and role-based access control
+- **Flutter** for the mobile application
+
+## Features
+- User roles: Admin, Teacher, Student
+- Attendance management
+- Class and student management
+- Secure login with Keycloak
+- Responsive mobile app interface
 
 ## Features
 - User roles: Admin, Teacher, Student
